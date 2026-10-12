@@ -11,7 +11,7 @@ WIDTH, HEIGHT = 960, 540
 RADIUS = 100
 XC = 0
 YC = 0
-DELAY_MS = 2  # Animation delay in milliseconds
+DELAY_MS = 2
 dx = -2
 dy = 1
 
@@ -38,21 +38,21 @@ def draw8way(x, y, xc, yc):
 
 
 def draw_circle_0(radius, xc, yc):
-    x = 0
-    y = radius
+    x = radius
+    y = 0
     decision = 3 - 2 * radius
 
-    while x <= y:
-        # Reflect the offsets, then translate every point by the same center.
-        draw8way(y, x, xc, yc)
+    while y <= x:
+        
+        draw8way(x, y, xc, yc)
 
         if decision < 0:
-            decision += 4 * x + 6
+            decision += 4 * y + 6
         else:
-            decision += 4 * (x - y) + 10
-            y -= 1
+            decision += 4 * (y - x) + 10
+            x -= 1
 
-        x += 1
+        y += 1
 
 
 def display():
@@ -61,7 +61,9 @@ def display():
     glColor3f(1.0, 1.0, 1.0)
 
     glBegin(GL_POINTS)
-    draw_circle_0(RADIUS, XC, YC)
+
+    draw_circle_0(RADIUS, XC, YC) // 32 % 8 = 0
+
     glEnd()
     glutSwapBuffers()
 
