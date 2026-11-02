@@ -1,0 +1,15 @@
+Initial Placement of Ellipse is at the topmost screen.
+Initial shape of the Ellipse: a=b=r=25
+Acceleration of the Ellipse = Acceleration of Gravity (Say, 5 Pixels/frame^2) 
+For any instance the a^2 + b^2 = r^2 formula will be preserved.
+
+For Odd Roll:
+-Starts from (0, b)
+
+For Even Roll:
+-Starts from (a, 0)
+Deliverables:
+1. Ellipse drawing and animation code
+2. Sufficient comments in each statement required.
+3. Relevant screenshots of the output.
+4. Sooner is better.
