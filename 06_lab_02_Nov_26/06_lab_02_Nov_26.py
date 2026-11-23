@@ -17,7 +17,7 @@ WIDTH, HEIGHT = 960, 540
 RADIUS = 25
 XC = 0
 GRAVITY = 5.0  # Downward acceleration in pixels/frame^2.
-SQUEEZE_ACCELERATION = -1.0  # Deceleration of positive compression speed (px/frame^2).
+SQUEEZE_ACCELERATION = -5.0  # Deceleration of positive compression speed (px/frame^2).
 MAX_AXIS_RATIO = 2.0  # Stop squeezing when a reaches twice b.
 DELAY_MS = 50  # Wall-clock delay between frames; physics uses one frame per tick.
 
